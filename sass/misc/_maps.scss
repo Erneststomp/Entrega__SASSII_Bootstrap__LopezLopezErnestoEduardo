@@ -1,0 +1,28 @@
+$redes_sociales:(
+    github:rgb(248, 197, 155),
+    linkedin:rgb(155, 195, 255),
+    instagram:rgb(205, 171, 250),
+);
+
+@each $red, $color in $redes_sociales {
+     .btn--#{$red}{
+         background-color: $color;
+     }
+     
+ }
+
+ .botones__redes{
+     nav{
+         a{
+             .primero{
+                background-color: map-get($redes_sociales, github);
+             }
+             .segundo{
+                background-color: map-get($redes_sociales, linkedin);
+             }
+             .tercero{
+                background-color: map-get($redes_sociales, instagram);
+             }
+         }
+     }
+ }

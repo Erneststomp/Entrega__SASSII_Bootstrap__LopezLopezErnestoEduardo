@@ -1,0 +1,93 @@
+
+ /*Configuracion NAV UL index y otros*/ 
+.nav__ul__border:hover{
+    transform: scale(1.1);
+}
+
+.body{
+    &__header__nav__ul__textcolor:hover {
+        background-color: $third;
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease; 
+    }
+    &__main__nav__ul__liststyle:hover {
+        transform: scale(1.05);
+        content: "";
+        background-color: $secondary;
+        width: auto;
+        height: auto;
+        border-radius: 7px;
+        transition: transform 0.3s ease;
+    }
+}
+
+
+@media only screen and (min-width: 900px){
+    .body__main__ul__padding{
+        padding-left: 1cm;
+        padding-right: 1cm;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .body{
+        &__header__border {
+        padding-left: .5cm;
+        padding-right: .5cm;}
+        &__header__nav__ul__textcolor:hover {
+        width: 95%;}
+    }
+}
+
+ /*Configuracion logos contact*/ 
+.contact__main__logo{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ /*Configuracion imagenes carousels*/ 
+@media only screen and (min-width: 900px){
+     
+        .portafolio__body__width{
+        width: 50%;}
+        .portafolio__carrousel__images{
+        display: block;
+        height: 200px;
+        width: auto;}
+    
+}
+@media only screen and (max-width: 900px){
+ 
+        .portafolio__body__width{
+            width: 100%;}    
+        .portafolio__carrouselheight{
+            height: 200px;}
+        .portafolio__carrousel__images{
+            display: block;
+            width: 80%;}
+    
+}
+
+/*Estilo Index-footer*/
+.body__footer{ 
+    position: fixed;
+    background: $primary;;
+    margin-top: 0cm;
+    margin-bottom: 0px;
+    height: 50px;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    min-width: 280px;
+        &__style{
+        padding:  0.25cm;
+        margin-right: 0%;
+        color: $fourth;
+        font-size: small;
+        text-align: right;
+        @extend .body__footer;
+    }
+}

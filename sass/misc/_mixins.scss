@@ -1,0 +1,22 @@
+@mixin anchofoto ($anchoelementos:100%, $altoelemento:100%, $backgroundcolorimage:none){
+    display: flex;
+    position: relative;
+    width: $anchoelementos;
+    max-width: 500px;
+    max-height: 250px;
+    height: $altoelemento;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    padding: auto;
+    background-color: $backgroundcolorimage;
+    border-radius: .5cm;
+}
+
+.ancho__imagen{
+    @include anchofoto(75%, auto);
+}
+
+.ancho__cuadro{
+    @include anchofoto(100%, 500px, $secondary);
+}

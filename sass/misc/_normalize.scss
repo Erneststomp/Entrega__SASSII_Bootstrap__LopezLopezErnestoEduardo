@@ -1,0 +1,43 @@
+$primary: #dc3545;
+$secondary: rgba(255, 183, 183, .7);
+$third: #a32733;
+$fourth: #ffffff;
+$fifth: #fdbdbd;
+$shadows: #222;
+
+.text-justify{
+    text-align: justify;
+}
+
+.header__logo__shadow{
+    -webkit-filter: drop-shadow(1px 1px 1px $shadows);
+    filter: drop-shadow(1px 1px 1px $shadows);
+}
+
+.gradient-custom {
+    background: $primary;
+    background: -webkit-linear-gradient(to bottom, $primary, $fourth);
+    background: linear-gradient(to bottom, $primary, $fourth);
+    &__nav{
+        background: $primary;
+        background: -webkit-linear-gradient(to bottom, $primary, $fifth);
+        background: linear-gradient(to bottom, $primary, $fifth);
+        }
+}
+
+.body__background {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(..//assets/images/background_sakura_01.png);;
+    background-size: cover;
+    transform: rotate(180deg);
+    opacity: .2;
+    z-index: -1;
+}
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $secondary,
+);
